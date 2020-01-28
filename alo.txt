@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/582877070b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Aloha</title>
+  </head>
+  <body class="container">
+    <header>
+      <!-- navigation starts here -->
+      <nav class="nav">
+        <div class="aloha-logo">
+          <!-- logo goes here -->
+          <img src="images/images/aloha-logo.svg" />
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#featured">FEATURED</a></li>
+            <li><a href="#updates">UPDATES</a></li>
+          </ul>
+        </div>
+        <div class="cart-icon">
+          <!-- cart icon goes here -->
+          <img src="images/images/cart-icon.svg" />
+        </div class="cart-icon" >
+      </nav>
+    </header>
+    <!-- main site content goes here -->
+    <main>
+      <section class="hero-banner">
+        <!-- hero section-->
+        <p id="about">New Collection</p>
+        <h2>Fall/Winter 2020</h2>
+      </section>
+      <section>
+        <!-- about -->
+        <h2>Hand-Crafted Style</h2>
+        <p>
+          Aloha Apparel Co. sells only the finest ready-to-travel clothing.
+          Browse our current selection of products or sign-up for updates below.
+        </p>
+      </section>
+      <section class="shop-grid" id="shop">
+        <!-- shop grid -->
+        <div>
+          <span>Men's</span>
+          <img src="images/images/mens-category.jpg">
+        </div>
+        <div>
+          <span>Trends</span>
+          <img src="images/images/trends-category.jpg">
+        </div>
+        <div>
+          <span>Glasses</span>
+          <img src="images/images/glasses-category.jpg">
+        </div>
+        <div>
+          <span class="shop-grid-sale" id="sale-title">Sale</span>
+          <img src="images/images/sale-category.jpg" >
+        </div>
+        <div>
+          <span>Bags</span>
+          <img src="images/images/bags-category.jpg">
+        </div>
+        <div>
+          <span>Women's</span>
+          <img src="images/images/womens-category.jpg">
+        </div>
+      </section>
+      <section>
+        <!-- featured -->
+        <h2>Most-Loved Products</h2>
+        <div class="most-loved-products" id="featured">
+          <!-- featured products -->
+          <figure>
+            <img
+              src="images/images/stretch-knit-dress.jpg"
+              alt="knitted dress"
+            />
+            <p>Dresses</p>
+            <h3>Stretch Knit Dress</h3>
+            <p>$169.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/blue-hipster-backpack.jpg" />
+            <p>Bags</p>
+            <h3>Blue Hipster Backpack</h3>
+            <p>$69.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/demin-overall-shorts.jpg" />
+            <p>Denim</p>
+            <h3>Denim Overall Shorts</h3>
+            <p>$89.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/pink-dotted-dress.jpg" />
+            <p>Dresses</p>
+            <h3>Pink Dotted Dress</h3>
+            <p>$99.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/checked-stretch-dress.jpg" />
+            <p>Dresses</p>
+            <h3>Checked Stretch Dress</h3>
+            <p>$89.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/cotton-yellow-tshirt.jpg" />
+            <p>T-shirt</p>
+            <h3>Cotton Yellow T-shirt</h3>
+            <p>$89.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/pink-dotted-dress.jpg" />
+            <p>Dresses</p>
+            <h3>Pink Dotted Dress</h3>
+            <p>$89.00</p>
+            <button>Add to Cart</button>
+          </figure>
+          <figure>
+            <img src="images/images/blue-silk-dress.jpg" />
+            <p>Dresses</p>
+            <h3>Blue Silk Dress</h3>
+            <p>$89.00</p>
+            <button>Add to Cart</button>
+          </figure>
+        </div>
+      </section>
+      <section class="updates" id="updates">
+        <!-- updates -->
+        <h2><em>Sign-up for</em><strong> Updates</strong></h2>
+        <p>
+          Stay updated on our latest product releases, be first to find out
+          about upcoming sales, and get free style tips from our blog.
+          Unsubscribe at anytime.
+        </p>
+        <form>
+          <input type="email" placeholder="Your Email" />
+          <input type="submit" value="Subscribe" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>
+          &copy 2020 Aloha Apparel Co. <br />
+          Powered by HTML and CSS.
+        </p>
+        <p>
+          647-647-6040
+          <a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a>
+        </p>
+        <p>
+          1490 W Broadway <br />
+          Vancouver, BC, Canada
+        </p>
+      </div>
+      <div>
+        <ul>
+          <li><i class="fab fa-facebook-f"> Facebook</i></li>
+          <li><i class="fab fa-twitter"> Twitter</i></li>
+          <li><i class="fab fa-instagram"> Instagram</i></li>
+          <li><i class="fab fa-pinterest"> Pinterest</i></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  color: #2d2d2d;
+  font-family: "Raleway Light", sans-serif;
+  }
+
+.aloha-logo {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 6em;
+}
+
+.cart-icon {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 14.5em;
+  margin-top: 2em;
+}
+
+.nav {
+  margin-bottom: 2em;
+  color: #e2574c;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url(../images/images/banner-girl.png), url(../images/images/flower-bkgd.jpg);
+  background-position: left, center 50px, center;
+  background-repeat: repeat, no-repeat, repeat;
+  background-size: cover, contain, cover;
+}
+ul {
+  display: flex;
+}
+
+li {
+  margin: 20px;
+  padding-top: 4em;
+}
+
+a {
+  text-decoration: none;
+  color: #b64036;
+}
+
+.hero-banner p {
+  color: white;
+  display: flex; 
+  justify-content: space-around;
+  }
+
+.hero-banner h2 {
+  color: white;
+  font-size: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.updates {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/images/wave-bkgd.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover, contain, cover;
+  color: white;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+ }
+
+h3 {
+  color: #e2574c;
+}
+
+
+a:hover {
+  color: #b64036;
+}
+
+.most-loved-products {
+  color: #969696;
+}
+
+footer {
+  background-color: #242424;
+  color: white;
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const evolveBtn = document.getElementById("evolve");
+
+  let currentStage = "Simple Spore";
+  let clicks = 0;
+  let styleColor = "black";
+  let secondStage = "Complicated Spore";
+  let evolutionStage = document.getElementById("evolution");
+  evolutionStage.innerHTML = secondStage;
+
+  evolveBtn.addEventListener("click", function evolve() {
+    clicks++;
+    console.log(clicks);
+
+    if (clicks === 10) {
+      currentStage = "10level up";
+      styleColor = "blue";
+    } else if (clicks === 12) {
+      currentStage = "12KA-BOOM";
+      styleColor = "red";
+    } else if (clicks == 15) {
+      currentStage = "15something else";
+      styleColor = "purple";
+    } else if (clicks === 18) {
+      currentStage = "18 18 18";
+      styleColor = "green";
+    } else {
+      currentStage = "everything else";
+      styleColor = "green";
+    }
+
+    evolutionStage.innerHTML = currentStage;
+    evolutionStage.style.color = styleColor;
+
+  });
+
+  const nameEl = document.getElementById("name");
+  nameEl.innerHTML = "Nicole";
+  
+});
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1 id="creature">Creature Name:</h1>
+<h2 id="name"></h2>
+
+<p>Current stage of evolution: <span id="evolution"></span></p>
+<button id="evolve">Evolve</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+library process
+
+import Library from "./Library.js";
+
+console.log(Library);
+const inventory = [
+  { title: "1984", author: "Orwell", id: 1 },
+  { title: "Dune", author: "Herbert", id: 2 },
+  { title: "1Q84", author: "Murakami", id: 3 }
+];
+
+const missInventory = [
+    { title: "1984", author: "Orwell", id: 1 },
+    { title: "Dune", author: "Herbert", id: 2 },
+    { title: "The Lean Startup", author: "Eric Ries", id: 3 }
+  ];
+
+const torontoLib = new Library(inventory)
+const mississaugaLib = new Library(missInventory)
+
+// console.log(torontoLib)
+
+// torontoLib.borrow(1)
+// console.log(torontoLib.borrow(1))
+
+// torontoLib.returnItem(1)
+// console.log(torontoLib.returnItem(1))
+
+// console.log(torontoLib)
+
+// console.log(torontoLib.toggleOpen())
+// console.log(torontoLib.toggleOpen())
+
+// console.log(mississaugaLib)
+
+
+
+
