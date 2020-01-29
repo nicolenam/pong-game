@@ -33,8 +33,18 @@ export default class Ball {
                 && (this.y >= topY && this.y <= bottomY)        
             )
             this.vx = -this.vx
+        } else {
+            let paddle = player1.coordinates(player1.x,player1.y,player1.width,player1.height)
+            let[leftX, rightX, topY, bottomY] = paddle
+
+            if (
+                (this.x - this.r >= leftX)
+                && (this.x - this.r <= rightX)
+                && (this.y >= topY && this.y <= bottomY)   
+            )
+            this.vx = -this.vx
         }
-        //else detect paddle1
+      
     }
 
     wallCollision(){
@@ -52,6 +62,12 @@ export default class Ball {
    
     }    
 
+    goal(player) {
+        player.score++
+        console.log(player.score)
+        this.reset()
+    }
+
     render(svg, player1, player2) {
         this.x += this.vx
         this.y += this.vy
@@ -66,6 +82,22 @@ export default class Ball {
         ball.setAttributeNS(null, 'cy', this.y)
         ball.setAttributeNS(null, 'fill', '#FFFFFF')
         svg.appendChild(ball)
+
+        const rightGoal = this.x + this.r >= this.boardWidth
+        const leftGoal = this.x - this.r <= 0
+
+        if(rightGoal){
+            console.log('player 1 scored')
+            this.goal(player1)
+            this.direction = 1
+        } else if(leftGoal){
+            console.log('player 2 scored')
+            this.goal(player2)
+            this.direction = -1
+        }
+
+
+
 
     }
 
