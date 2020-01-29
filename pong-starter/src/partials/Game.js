@@ -1,4 +1,4 @@
-import { SVG_NS } from "../settings";
+import { SVG_NS, KEYS } from "../settings";
 import Board from "./Board";
 import Paddle from "./Paddle";
 import Ball from "./Ball";
@@ -11,7 +11,7 @@ export default class Game {
 
     // Other code goes here...
     this.gameElement = document.getElementById(this.element);
-
+    
     this.board = new Board(this.width, this.height);
 
     this.paddleWidth = 8;
@@ -23,7 +23,9 @@ export default class Game {
       this.paddleWidth,
       this.paddleHeight,
       this.boardGap,
-      (this.height - this.paddleHeight) / 2
+      (this.height - this.paddleHeight) / 2,
+      KEYS.a,
+      KEYS.z
     );
 
     this.player2 = new Paddle(
@@ -31,7 +33,9 @@ export default class Game {
       this.paddleWidth,
       this.paddleHeight,
       this.width - this.boardGap - this.paddleWidth,
-      (this.height - this.paddleHeight) / 2
+      (this.height - this.paddleHeight) / 2,
+      KEYS.up,
+      KEYS.down
     );
 
     this.ballRadius = 8;
