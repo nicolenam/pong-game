@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Library</title>
+  </head>
+  <body>
+    <section class="inventory">
+      <h1>Inventory:</h1>
+      <ul id="inventoryList"></ul>
+    </section>
+​
+    <section class="lowerHalf">
+      <section class="user">
+        <h1>User Section:</h1>
+        <h3>Borrow a book:</h3>
+        <form id="borrowBookForm">
+          <input
+            id="bookToBorrow"
+            type="text"
+            name="bookToBorrow"
+            placeholder="enter the book id"
+          />
+          <input type="submit" name="borrowBtn" />
+        </form>
+        <h3>Return a book:</h3>
+        <form id="returnBookForm">
+          <input
+            id="bookToReturn"
+            type="text"
+            name="bookToReturn"
+            placeholder="enter the book id"
+          />
+          <input type="submit" name="returnBtn" />
+        </form>
+      </section>
+      <section class="librarian">
+        <h1>Librarian's Section:</h1>
+        <h1>The library is currently <span id="openSign">open</span></h1>
+​
+        <button id="openBtn">Open/Close</button>
+​
+        <form id="addBookForm">
+          <h3>Add new book to library:</h3>
+          <input id="title" type="text" name="title" placeholder="Book Title" />
+          <input
+            id="author"
+            type="text"
+            name="author"
+            placeholder="Book Author"
+          />
+          <input type="submit" name="newBookBtn" />
+        </form>
+      </section>
+    </section>
+    <script type="module" src="./Library.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
+
+
+
+
+
