@@ -4,6 +4,7 @@ import Paddle from "./Paddle";
 import Ball from "./Ball";
 import Score from "./Score";
 
+
 export default class Game {
   constructor(element, width, height) {
     this.element = element;
