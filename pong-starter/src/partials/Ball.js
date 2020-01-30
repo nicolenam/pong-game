@@ -20,6 +20,10 @@ export default class Ball {
         this.vy = Math.floor(Math.random() *10 - 5)
         }
         this.vx = this.direction * (6 - Math.abs(this.vy))
+
+        // change the color of the ball
+        
+
     }
 
     paddleCollision(player1, player2) {
@@ -90,10 +94,12 @@ export default class Ball {
             console.log('player 1 scored')
             this.goal(player1)
             this.direction = 1
+            alert("player 1 scored!")
         } else if(leftGoal){
             console.log('player 2 scored')
             this.goal(player2)
             this.direction = -1
+            alert("player 2 scored!")
         }
 
 
