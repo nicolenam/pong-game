@@ -15,7 +15,7 @@ export default class Ball {
     //code to center ball and for movement
     this.x = this.boardWidth / 2;
     this.y = this.boardHeight / 2;
-
+    
     // generates randowm number between -5 and 5
     this.vy = 0;
     while (this.vy === 0) {
@@ -79,27 +79,12 @@ export default class Ball {
     }
   }
 
-//   changeBallShape() {
-//       const noHitLeft = !(this.x - this.r <=0);
-//       const noHitRight = !(this.x + this.r >= this.boardWidth)
-//       const noHitTop = !(this.y - this.r <= 0)
-//       const nohitBottom = !(this.y + this.r >= this.boardHeight)
-
-//       if (notHitLeft || notHitRight) {
-
-//       } else if (notHitTop)
-
-
-
-//   }
-
-
-
-
   goal(player) {
     player.score++;
-    console.log(player.score);
-    this.reset();
+    if (player.score >= 11) {
+      alert("Game over");
+    } 
+       this.reset();
   }
 
   render(svg, player1, player2) {
