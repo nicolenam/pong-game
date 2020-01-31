@@ -1,14 +1,14 @@
 import { SVG_NS } from "../settings";
-
+import pingSound from "../../public/sounds/pong-03.wav"
 export default class Ball {
-  constructor(r, boardWidth, boardHeight, color, lives) {
+  constructor(r, boardWidth, boardHeight, color) {
     this.r = r;
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
     this.direction = 1;
     this.color = "white";
+    this.ping = new Audio(pingSound);
     this.reset();
-    this.lives = 3;
   }
 
   reset() {
@@ -38,8 +38,9 @@ export default class Ball {
         this.x + this.r <= rightX &&
         this.y >= topY &&
         this.y <= bottomY
-      )
-        this.vx = -this.vx;
+      ){
+        this.ping.play()
+        this.vx = -this.vx;}
     } else {
       let paddle = player1.coordinates(
         player1.x,
@@ -54,8 +55,9 @@ export default class Ball {
         this.x - this.r <= rightX &&
         this.y >= topY &&
         this.y <= bottomY
-      )
-        this.vx = -this.vx;
+      ){
+        this.ping.play()
+        this.vx = -this.vx;}
     }
   }
 
@@ -82,8 +84,10 @@ export default class Ball {
 
   goal(playerWhoScored, otherPlayer) {
     playerWhoScored.score++;
+
     if (playerWhoScored.score >= 6) {
       if ((this.height - this.paddleHeight) / 2) {
+        //this is x position of the paddle
         alert("Player 1 wins!");
       } else {
         alert("Player 2 wins!");
@@ -115,6 +119,7 @@ export default class Ball {
 
     if (rightGoal) {
       console.log("player 1 scored");
+
       this.goal(player1, player2);
       this.direction = 1;
     } else if (leftGoal) {
