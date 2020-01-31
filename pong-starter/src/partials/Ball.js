@@ -1,22 +1,21 @@
 import { SVG_NS } from "../settings";
 
 export default class Ball {
-  constructor(r, boardWidth, boardHeight, color) {
+  constructor(r, boardWidth, boardHeight, color, lives) {
     this.r = r;
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
-    this.direction = 1; //speed of the ball
-    //resets the ball in the middle of the board
+    this.direction = 1;
     this.color = "white";
     this.reset();
+    this.lives = 3;
   }
 
   reset() {
     //code to center ball and for movement
     this.x = this.boardWidth / 2;
     this.y = this.boardHeight / 2;
-    
-    // generates randowm number between -5 and 5
+    // generates random number between -5 and 5
     this.vy = 0;
     while (this.vy === 0) {
       this.vy = Math.floor(Math.random() * 10 - 5);
@@ -72,19 +71,28 @@ export default class Ball {
 
     if (hitLeft || hitRight) {
       this.vx = -this.vx;
+
       this.color = generateRandomColor();
     } else if (hitTop || hitBottom) {
       this.vy = -this.vy;
+
       this.color = generateRandomColor();
     }
   }
 
-  goal(player) {
-    player.score++;
-    if (player.score >= 11) {
-      alert("Game over");
-    } 
-       this.reset();
+  goal(playerWhoScored, otherPlayer) {
+    playerWhoScored.score++;
+    if (playerWhoScored.score >= 6) {
+      if ((this.height - this.paddleHeight) / 2) {
+        alert("Player 1 wins!");
+      } else {
+        alert("Player 2 wins!");
+      }
+      alert("Game Over");
+      playerWhoScored.score = 0;
+      otherPlayer.score = 0;
+    }
+    this.reset();
   }
 
   render(svg, player1, player2) {
@@ -107,14 +115,12 @@ export default class Ball {
 
     if (rightGoal) {
       console.log("player 1 scored");
-      this.goal(player1);
+      this.goal(player1, player2);
       this.direction = 1;
-      //   alert("player 1 scored!");
     } else if (leftGoal) {
       console.log("player 2 scored");
-      this.goal(player2);
+      this.goal(player2, player1);
       this.direction = -1;
-      //   alert("player 2 scored!");
     }
   }
 }

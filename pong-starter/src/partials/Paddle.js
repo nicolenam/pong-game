@@ -30,15 +30,13 @@ export default class Paddle {
     this.y = Math.min(this.boardHeight - this.height, this.y + this.speed);
   }
 
-  coordinates(x,y, width, height) {
-      let leftX = x
-      let rightX = x + width
-      let topY = y
-      let bottomY = y + height
-      return[leftX, rightX, topY, bottomY]
-    }
-
-
+  coordinates(x, y, width, height) {
+    let leftX = x;
+    let rightX = x + width;
+    let topY = y;
+    let bottomY = y + height;
+    return [leftX, rightX, topY, bottomY];
+  }
 
   render(svg) {
     let rect = document.createElementNS(SVG_NS, "rect");
@@ -47,7 +45,7 @@ export default class Paddle {
     rect.setAttributeNS(null, "height", this.height);
     rect.setAttributeNS(null, "x", this.x);
     rect.setAttributeNS(null, "y", this.y);
-    rect.setAttributeNS(null, "fill", "#ffffff");
+    rect.setAttributeNS(null, "fill", "#FFFfff");
     svg.appendChild(rect);
   }
 }
