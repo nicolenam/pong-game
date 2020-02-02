@@ -76,11 +76,11 @@ export default class Ball {
 
     if (hitLeft || hitRight) {
       this.vx = -this.vx;
-
+      this.ping.play();
       this.color = generateRandomColor();
     } else if (hitTop || hitBottom) {
       this.vy = -this.vy;
-
+      this.ping.play();
       this.color = generateRandomColor();
     }
   }
