@@ -1,5 +1,5 @@
 import { SVG_NS } from "../settings";
-import pingSound from "../../public/sounds/pong-03.wav"
+import pingSound from "../../public/sounds/pong-03.wav";
 export default class Ball {
   constructor(r, boardWidth, boardHeight, color) {
     this.r = r;
@@ -25,6 +25,7 @@ export default class Ball {
 
   paddleCollision(player1, player2) {
     //if vx is greater than 0, detect paddle2
+
     if (this.vx > 0) {
       let paddle = player2.coordinates(
         player2.x,
@@ -38,9 +39,10 @@ export default class Ball {
         this.x + this.r <= rightX &&
         this.y >= topY &&
         this.y <= bottomY
-      ){
-        this.ping.play()
-        this.vx = -this.vx;}
+      ) {
+        this.ping.play();
+        this.vx = -this.vx;
+      }
     } else {
       let paddle = player1.coordinates(
         player1.x,
@@ -55,9 +57,10 @@ export default class Ball {
         this.x - this.r <= rightX &&
         this.y >= topY &&
         this.y <= bottomY
-      ){
-        this.ping.play()
-        this.vx = -this.vx;}
+      ) {
+        this.ping.play();
+        this.vx = -this.vx;
+      }
     }
   }
 

@@ -1,4 +1,5 @@
 import { SVG_NS } from "../settings";
+import Ball from "./Ball";
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down, shade) {
@@ -7,9 +8,10 @@ export default class Paddle {
     this.height = height;
     this.x = x;
     this.y = y;
+    this.shade = "white"
     this.speed = 10;
     this.score = 0;
-    this.shade = "red";
+
     document.addEventListener("keydown", event => {
       switch (event.key) {
         case up:
@@ -38,20 +40,9 @@ export default class Paddle {
     return [leftX, rightX, topY, bottomY];
   }
 
-  //when ball hits the paddles
-paddleHit() {
-  function generateRandomColor() {
-    var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    return randomColor;
-  }
 
-  if (this.height - this.paddleHeight / 2) {
 
-  } else {
 
-    this.shade = generateRandomColor();
-  }
-}
 
   render(svg) {
     let rect = document.createElementNS(SVG_NS, "rect");
@@ -62,6 +53,6 @@ paddleHit() {
     rect.setAttributeNS(null, "y", this.y);
     rect.setAttributeNS(null, "fill", this.shade);
     svg.appendChild(rect);
-    this.paddleHit();
+   
   }
 }

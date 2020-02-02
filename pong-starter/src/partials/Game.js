@@ -4,6 +4,7 @@ import Paddle from "./Paddle";
 import Ball from "./Ball";
 import Score from "./Score";
 
+
 export default class Game {
   constructor(element, width, height) {
     this.element = element;
@@ -47,13 +48,6 @@ export default class Game {
     this.score1 = new Score(this.width / 2 - 50, 30, 30);
 
     this.score2 = new Score(this.width / 2 + 25, 30, 30);
-
-    //make a method here that clears the scores
-
-    // document.getElementById("start").addEventListener("click", event => {
-    //         this.pause = !this.pause;
-    //   document.getElementById("start").style.visibility = "hidden";
-    // });
 
     document.addEventListener("keydown", event => {
       switch (event.key) {
