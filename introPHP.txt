@@ -1,0 +1,88 @@
+// //import file contents
+// $json = file_get_contents('data.json');
+// // convert json into associate array
+// $cars = json_decode($json, true);
+// //show in browser
+// print_r($cars);
+
+
+//LOOPS
+// counter variable
+$i = 0;
+$months = ['jan', 'feb', 'march','april','may'];
+
+$cars = array (
+    'make' => 'honda',
+    'model' => 'civic'
+);
+
+while($i < count($months)) :
+    echo '<pre>';
+    echo $months[$i];
+    echo '</pre>';
+    $i++;
+endwhile;
+echo 'end of while loop';
+
+for($i =0 ; $i < count($months); $i++) :
+    echo '<pre>';
+    echo $months[$i];
+    echo '</pre>';
+endfor;
+echo 'end of for loop';
+
+foreach($months as $month) :
+    echo '<pre>';
+    echo $month;
+    echo '</pre>';
+endforeach;
+echo 'end of foreach loop';
+
+foreach($cars as $prop => $val) :
+    echo "<pre>The $prop is $val </pre>";
+endforeach;
+
+
+
+//ARRAYS
+// $car = array(
+//     array (
+//         'make' => 'honda',
+//         'model' => 'civic'
+//     ),array (
+//         'make' => 'toyota',
+//         'model' => 'corolla'
+//     )
+   
+// );
+
+// echo '<pre>';
+// print_r($car[1]['model']);
+// echo '</pre>';
+
+// $months = ['jan', 'feb', 'march'];
+// echo '<pre>';
+// print_r($months);
+// echo '</pre>';
+
+// array_push($months, 'april');
+// $removed = array_pop($months);
+// unset($months[0]); remove
+// $months[] = 'april';
+// phpinfo();
+
+// echo '<pre>';
+// print_r($months);
+// echo '</pre>';
+
+
+
+// $score = 10;
+
+// if($score == 10) :
+//     echo "It's equal";
+// elseif($score > 9) :
+//     echo "Greater";
+// else : 
+//     echo "Less than";
+// endif;

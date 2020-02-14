@@ -1,0 +1,185 @@
+    <!-- <div class = "page-wrapper">
+        <h1>This page</h1>
+        <p class= "sub-header">Welcome to my page</p>
+        <article id="post">
+            <p class="opening-line">Thanks for stopping by</p>
+            <p>See you soon</p>
+        </article>
+    </div>
+         -->
+    <!-- 
+         <article>
+            <p class="opening-line">The first line.</p>
+            <p>The second line.</p>
+          </article>
+          <p>A line outside the article.</p> -->
+
+    <!-- <div class="page-wrapper"> -->
+    <!-- <form action="">
+        <input type="text" />
+      </form> -->
+    <!-- <form>
+        <select class="tshirt">
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+        </select>
+      </form> -->
+    <!-- <ul class="numbers">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul> -->
+    <!-- </div> -->
+    <!-- <div class="list-editor">
+      <ul class="my-list">
+        <li><span>My to-do</span> <a href="#" class="delete">[done]</a></li>
+      </ul>
+      <input type="text" name="new-item" /> <button>Add an item</button>
+    </div> -->
+
+    <!-- <ul class="faq-list">
+        <li>
+          <a id="first" href="#" rel="acc-1">First question?</a>
+          <p id="acc-1">This is the first answer.</p>
+        </li>
+        <li>
+          <a id="second" href="#" rel="acc-2">Second question?</a>
+          <p id="acc-2">This is the second answer.</p>
+        </li>
+        <li>
+          <a id="third" href="#" rel="acc-3">Third question?</a>
+          <p id="acc-3">This is the third answer.</p>
+        </li>
+      </ul> -->
+      
+
+
+
+javascript
+  //function to load the DOM tree
+
+  // $(".sub-header").css("color", "red");
+
+  // $(".opening-line").siblings().css("color","red")
+  //   $("article")
+  //     .children()
+  //     .css("color", "blue")
+  //     .css("font-size", "30px");
+
+  //   $(".opening-line")
+  //     .parent()
+  //     .siblings()
+  //     .css("color", "red")
+  //     .text("I changed you!");
+
+  //   let name = "Nicole";
+  //   $(".opening-line")
+  //     .siblings()
+  //     .html(`<h3>My name is ${name}.</h3>`);
+
+  //   $(".page-wrapper").children().on("mouseover", function() {
+  //     $(this).css("color", "pink");
+  //   });
+  //   $("#post").children().on("mouseover", function() {
+  //     $(this).css("color", "pink");
+  //   });
+
+  //   //creates children/descendants
+  //   $("#post").append("<p>Another p tag</p>")
+  //   $("#post").prepend("<p>Another p tag</p>")
+
+  //   //creates siblings
+  //   $("#post").after("<p>After article</p>")
+  //   $("#post").before("<p>Before article</p>")
+
+  //   //removes content
+  //   $(".opening-line").remove()
+
+  //   //removes or adds classes
+  //   $(".opening-line").addClass("active")
+  //   $("p").removeClass("sub-header")
+
+  // //   adds properties to html elements
+  //   $("input[type='checkbox']").prop("disabled", true)
+
+  // $(".opening-line").siblings().css("color","red")
+
+  // $(".opening-line").siblings().click ( function(){
+  //     $(this).css("color", "red")
+  // })
+
+  // $(".opening-line").remove()
+  // $("article").children().css("color","red")
+
+  // $("article").children(".opening-line").siblings().css("color","red")
+
+  // $("article p:nth-child(2)").css("color", "red")
+
+  //Button Function
+  //   let counter = 5;
+
+  //   $(".page-wrapper").on("click", "button", function() {
+  //     // counter++;
+  //     // $(".numbers").append(`<li>${counter}</li>`).hide().fadeIn("slow");
+  //     let val = $("input[type='text']").val();
+  //     console.log(val);
+  //     $(".page-wrapper").append(`<li>${val}</li>`) //append to html page
+  //     $("input[type='text']").val(""); //clears the input after grabbing the value
+  //   });
+
+  //   $("form").after("<button>Check Value</button>");
+
+  // $(".tshirt").on("change", function(){
+  //     let $userInput =$(this).val()
+  //     // console.log(event.target.value)
+  //     console.log($userInput)
+  // })
+
+    // $(".list-editor").on("click", "button", function(){
+    //     let $val = $("input[type='text']").val();
+    //     // if(!$val){
+    //     //   console.log("empty")
+    //     // }else {
+    //     // $(".my-list").append(`<li><span>${$val}</span> <a href="#" class="delete">[done]</a></li>`)
+    //     // $("input[type='text']").val("")
+    //     // }
+    //     // terninary operator works exactly like the if /else statement
+    //     $val ? $(".my-list").append(`<li><span>${$val}</span> <a href="#" class="delete">[done]</a></li>`): alert("Please enter a value")
+    //     $("input[type='text']").val("")
+    // })
+
+    // $(".list-editor").on("click","a", function(){
+    // $(this).siblings().css("text-decoration", "line-through")
+    // })
+
+
+  // $("#acc-1").hide();
+  // $("#first").click(function() {
+  //   $("#acc-1").toggle();
+  //   $("#acc-2").hide();
+  //   $("#acc-3").hide();
+  // });
+  // $("#acc-2").hide();
+  // $("#second").click(function() {
+  //   $("#acc-2").toggle();
+  //   $("#acc-1").hide();
+  //   $("#acc-3").hide();
+  // });
+  // $("#acc-3").hide();
+  // $("#third").click(function() {
+  //   $("#acc-3").toggle();
+  //   $("#acc-1").hide();
+  //   $("#acc-2").hide();
+  // });
+
+
+    // $("p").css("display", "none");
+    // $(".faq-list").on("click", "a", function(event) {
+    //   $(this).siblings().toggle("slow");
+    //   $(this).parent().siblings().children("p").hide()
+   
+      
+    //  });
